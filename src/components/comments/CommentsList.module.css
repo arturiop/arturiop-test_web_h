@@ -1,0 +1,8 @@
+.wrap{
+    padding: 2% 0;
+    width: 100%;
+}
+.commentsList {
+    height: 60vh;
+    overflow: auto;
+}

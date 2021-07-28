@@ -1,0 +1,55 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    },
+    "rules": {
+        "@typescript-eslint/no-unused-vars": [
+            "warn"
+        ],
+        "import/prefer-default-export": "off",
+        "import/extensions": "off",
+        "quotes": [1, "single",
+            {
+                "allowTemplateLiterals": true
+            }
+        ],
+        "no-param-reassign": "off",
+        "camelcase": 0,
+        "react/react-in-jsx-scope": "off",
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": ["error"],
+        "react/jsx-indent": [2, 2, {
+            "checkAttributes": true,
+            "indentLogicalExpressions": true
+        }],
+        "react/jsx-one-expression-per-line": [1, { "allow": "literal" }],
+        "react/jsx-indent-props": [1, 2],
+        "react / jsx-filename-extension": [0],
+        "react/jsx-filename-extension": [1, { "allow": "as-needed" }],
+        "multiline-ternary": 0
+    }
+}
