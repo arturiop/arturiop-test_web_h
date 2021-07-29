@@ -5,5 +5,5 @@ const instance = axios.create({
 });
 
 instance.interceptors.request.use((config) => config, (error) => error);
-
+instance.interceptors.response.use((config) => config, (error) => error);
 export default instance;

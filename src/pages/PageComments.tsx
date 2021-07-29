@@ -39,6 +39,10 @@ export const PageComments = () => {
 
   const onSubmit = (data: BodySendCommentType) => {
     dispatch(sendComment(data));
+
+    if (currentPage === totalPages) {
+      dispatch(requestComments(currentPage));
+    }
   };
 
   return (

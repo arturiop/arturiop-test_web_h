@@ -6,6 +6,7 @@ import {
 import { CommentType } from './types';
 import { CommentsAPI } from './commentsApi';
 import { BodySendCommentType } from '../../types/types';
+import { errorPopups } from '../../components/ui/ErrorMessage/ErrorMessage';
 
 export const requestComments = createAsyncThunk(
   'comments/requestComments', async (page: number) => {
@@ -19,6 +20,7 @@ export const requestComments = createAsyncThunk(
         status,
       };
     } catch (e) {
+      errorPopups(e.message);
       return e;
     }
   },
@@ -36,6 +38,7 @@ export const loadMoreComments = createAsyncThunk(
         status,
       };
     } catch (e) {
+      errorPopups(e.message);
       return e;
     }
   },
@@ -53,6 +56,7 @@ export const sendComment = createAsyncThunk(
         status,
       };
     } catch (e) {
+      errorPopups(e.message);
       return e;
     }
   },

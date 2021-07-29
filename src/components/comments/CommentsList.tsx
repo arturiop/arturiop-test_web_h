@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { CommentType } from '../../features/comments/types';
 import styles from './CommentsList.module.css';
 import { Comment } from './Comment';
+import { CommentsStub } from '../ui/stubs/CommentsStub';
 
 type PropsType = {
   state: Array<CommentType>
@@ -17,8 +18,11 @@ export const CommentsList = ({ state }: PropsType) => {
   return (
     <div className={styles.wrap}>
       <div className={styles.commentsList}>
-        {mappedCommentsData}
+        {(state.length === 0)
+          ? <CommentsStub />
+          : mappedCommentsData}
       </div>
+
     </div>
   );
 };
